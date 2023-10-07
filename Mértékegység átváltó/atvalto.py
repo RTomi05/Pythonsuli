@@ -18,7 +18,7 @@ valtok=[[10,10,10,1000,1],
           []]
 
 
-
+    
 print("#"*35)
 #for elem in tipusok:
 #   print(elem)
@@ -96,6 +96,7 @@ else:
         szorzo*=e
     eredmeny=szam*szorzo
 
-
+print("#"*35)
+print("Eredmény:")
 
 print(szam,egysegek[tipusId][egysegId],eredmeny,egysegek[tipusId][egysegId2])
