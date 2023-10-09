@@ -17,86 +17,91 @@ valtok=[[10,10,10,1000,1],
           ["ml", "cl", "dl", "l", "hl"],
           []]
 
-
+tipusId="";
+egysegId="";
+egysegId2="";
+terfogat = egysegek[2]
+urmertek= egysegek[4]
+while tipusId!=0 or egysegId!=0 or egysegId2!=0:
     
-print("#"*35)
-#for elem in tipusok:
-#   print(elem)
+    print("#"*35)
+    #for elem in tipusok:
+    #   print(elem)
 
-for i,elem in enumerate(tipusok):
-    print("\t"+str(i+1)+":",elem)
+    for i,elem in enumerate(tipusok):
+        print("\t"+str(i+1)+":",elem)
 
-print("\t0: Kilépés")
+    print("\t0: Kilépés")
 
-tipusId="alma"
-while tipusId=="alma" or tipusId not in range(len(tipusok)+1):
-    try:
-        tipusId=int(input("Válassz! "))
-        if tipusId not in range(len(tipusok)+1):
-            raise                
-    except:
-        print("Válassz a listából!")
+    tipusId="alma"
+    while tipusId=="alma" or tipusId not in range(len(tipusok)+1):
+        try:
+            tipusId=int(input("Válassz! "))
+            if tipusId not in range(len(tipusok)+1):
+                raise                
+        except:
+            print("Válassz a listából!")
 
-print("#"*35)
-tipusId-=1
-print("Típus:",tipusok[tipusId])
-
-
-print("Mértékegységek:")
-
-print("Forrás:")
-for i,elem in enumerate(egysegek[tipusId]):
-    print("\t"+str(i+1)+":",elem)
-    
-print("\t0: Vissza")
-
-egysegId="alma"
-while egysegId=="alma" or egysegId not in range(len(egysegek[tipusId])+1):
-    try:
-        egysegId=int(input("Válassz! "))
-        if egysegId not in range(len(egysegek[tipusId])+1):
-            raise                
-    except:
-        print("Válassz a listából!")
+    print("#"*35)
+    tipusId-=1
+    print("Típus:",tipusok[tipusId])
 
 
-print("Cél:")
+    print("Mértékegységek:")
 
-for i,elem in enumerate(egysegek[tipusId]):
-    print("\t"+str(i+1)+":",elem)
-    
-print("\t0: Vissza")
+    print("Forrás:")
+    for i,elem in enumerate(egysegek[tipusId]):
+        print("\t"+str(i+1)+":",elem)
+        
+    print("\t0: Vissza")
 
-egysegId2="alma"
-while egysegId2=="alma" or egysegId2 not in range(len(egysegek[tipusId])+1):
-    try:
-        egysegId2=int(input("Válassz! "))
-        if egysegId2 not in range(len(egysegek[tipusId])+1):
-            raise                
-    except:
-        print("Válassz a listából!")
+    egysegId="alma"
+    while egysegId=="alma" or egysegId not in range(len(egysegek[tipusId])+1):
+        try:
+            egysegId=int(input("Válassz! "))
+            if egysegId not in range(len(egysegek[tipusId])+1):
+                raise                
+        except:
+            print("Válassz a listából!")
+
+
+    print("Cél:")
+
+    for i,elem in enumerate(egysegek[tipusId]):
+        print("\t"+str(i+1)+":",elem)
+        
+    print("\t0: Vissza")
+
+    egysegId2="alma"
+    while egysegId2=="alma" or egysegId2 not in range(len(egysegek[tipusId])+1):
+        try:
+            egysegId2=int(input("Válassz! "))
+            if egysegId2 not in range(len(egysegek[tipusId])+1):
+                raise                
+        except:
+            print("Válassz a listából!")
 
 
 
-szam=float(input("Mennyiség: "))
-egysegId-=1
-egysegId2-=1
+    szam=float(input("Mennyiség: "))
+    egysegId-=1
+    egysegId2-=1
 
-if egysegId<egysegId2:
-    #print(valtok[tipusId][egysegId:egysegId2])
-    szorzo=1
-    for e in valtok[tipusId][egysegId:egysegId2]:
-        szorzo*=e
-    eredmeny=szam/szorzo
-    
-else:
-    #print(valtok[tipusId][egysegId2:egysegId])
-    szorzo=1
-    for e in valtok[tipusId][egysegId2:egysegId]:
-        szorzo*=e
-    eredmeny=szam*szorzo
+    if egysegId<egysegId2:
+        #print(valtok[tipusId][egysegId:egysegId2])
+        szorzo=1
+        for e in valtok[tipusId][egysegId:egysegId2]:
+            szorzo*=e
+        eredmeny=szam/szorzo
+        
+    else:
+        #print(valtok[tipusId][egysegId2:egysegId])
+        szorzo=1
+        for e in valtok[tipusId][egysegId2:egysegId]:
+            szorzo*=e
+        eredmeny=szam*szorzo
 
-print("#"*35)
-print("Eredmény:")
+    print("#"*35)
+    print("Eredmény:")
 
-print(szam,egysegek[tipusId][egysegId],eredmeny,egysegek[tipusId][egysegId2])
+    print(szam,egysegek[tipusId][egysegId],eredmeny,egysegek[tipusId][egysegId2])
