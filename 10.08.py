@@ -32,6 +32,5 @@ print("#"*50)
 for elem in lista[::-1]:
     print(elem)
 
-
 lista2=lista[1:-1]
 print(lista2)
