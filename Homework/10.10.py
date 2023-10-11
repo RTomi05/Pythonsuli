@@ -4,4 +4,3 @@ print(szöveg)
 print("#"*67)
 szöveg.sort()
 print(szöveg)
-
