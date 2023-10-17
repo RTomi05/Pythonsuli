@@ -20,3 +20,6 @@ print(len(a))
 
 b=a.split("l")
 print(b)
+
+
+
