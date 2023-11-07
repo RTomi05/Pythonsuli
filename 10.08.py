@@ -34,3 +34,6 @@ for elem in lista[::-1]:
 
 lista2=lista[1:-1]
 print(lista2)
+
+
+print(125 ==5*5**2 )
