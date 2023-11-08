@@ -6,7 +6,7 @@ otb = [];
 mghvagymsh = ["0", "1"];
 ideiglenes = ["alma"];
 
-while(len(ideiglenes == 1)):
+while len(ideiglenes == 1):
     #while (len(otb)) < 5:
      #   x = random.choice(mghvagymsh)
       #  if x ==  0:
