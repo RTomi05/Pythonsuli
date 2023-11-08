@@ -15,7 +15,7 @@ folytatas = ""
 
 def my_function():
     otb = []
-    print("#"*80)
+    print("#*"*40)
     while len(otb) < 5:
         i = random.choice(mshvagymgh)
         if i == "0":
