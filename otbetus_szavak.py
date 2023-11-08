@@ -9,12 +9,13 @@ mgh = ["a", "á", "e", "é", "i", "í", "o", "ó", "ö", "ő", "u", "ú", "ü", 
 mshvagymgh = ["0", "1"];
 folyt = ["Nem!", "Igen!"];
 folytatas = ""
-number = 2
+
 
 
 
 def my_function():
     otb = []
+    print("#"*80)
     while len(otb) < 5:
         i = random.choice(mshvagymgh)
         if i == "0":
