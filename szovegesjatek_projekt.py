@@ -16,7 +16,7 @@ lista=["előre", "hátra", "jobbra", "balra"]
 
 #print("\n".join(lista))
 
-valasz=menu(lista)s
+#valasz=menu(lista)s
 #print(valasz,lista[valasz])
 
 tortenet=[
@@ -41,7 +41,42 @@ tortenet=[
         [
             4,#szál ID
             "Kissé hűvös van. Kellene valami ruha. \nFelveszek egy nadrágot, meg egy pólót.",#szöveg
-            ["fogmosás", "reggeli", "öltözés"],#választási lehetőségek
-            [2,3,4] #hova ugorjon
+            ["fogmosás", "reggeli", "öltözés", "66-os parancs"],#választási lehetőségek
+            [2,3,4,66] #hova ugorjon
+        ],
+        [
+            66,#szál ID
+            "Vége mindennek...",#szöveg
+            [],#választási lehetőségek
+            [] #hova ugorjon
         ]
     ]
+
+szalId=1
+
+while True:
+    temp=[]
+    for e in tortenet:
+        temp.append(e[0])
+    #másként
+    temp=[e[0] for e in tortenet]
+    szalIndex=temp.index(szalId)
+
+    print(tortenet[szalIndex][1])
+    
+    if tortenet[szalIndex][2]==[]:
+        break
+    
+    menuPont=menu(tortenet[szalIndex][2])
+
+    if menuPont == 68:
+        break
+
+    szalId=tortenet[szalIndex][3][menuPont]
+
+
+
+print("The End")
+
+    
+
