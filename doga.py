@@ -34,3 +34,11 @@ print(db)
 dbLista=[len([i for i in szamok if i//10000==k]) for k in range(10) ]
 print(dbLista)
 #Válogassátok szét az első számjegy szerint, és írjátok ki, hogy melyikből mennyi van! 4 pont
+
+db=90
+eltolas=10000
+lepes=1000
+import math
+
+szam=math.floor(random.random()*db)*lepes+eltolas
+print(szam)
