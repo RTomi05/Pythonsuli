@@ -39,3 +39,4 @@ if sum(listafel1) > sum(listafel2):
 else:
     print("A lista második fele a nagyobb.")
 
+
