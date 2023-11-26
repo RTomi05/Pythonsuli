@@ -5,6 +5,7 @@ RPS=["kő","papír","olló", "kilépés"]
 ujra="1"
 
 print("A kő-papír-olló játékszabályai:\n""A kő kicsorbítja az ollót: A kő győz.\nAz olló elvágja a papírt: Az olló győz.\nA papír becsomagolja a követ: A papír győz.""\n""Jó szórakozást!")
+nev=str(input("Felhasználóneved: "))
 
 while ujra == "1":
     jatekos = 0
@@ -53,15 +54,15 @@ while ujra == "1":
     if (computer == 1 and jatekos == 1) or (computer == 2 and jatekos == 2) or (computer == 3 and jatekos == 3):
         print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""Döntetlen.")
     if computer == 1 and jatekos == 2:
-        print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""Te nyertél.")
+        print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n",nev,"nyert.")
     if computer == 1 and jatekos == 3:
         print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""A számítógép nyert.")
     if computer == 2 and jatekos == 1:
         print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""A számítógép nyert.")
     if computer == 2 and jatekos == 3:
-        print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""Te nyertél.")
+        print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n",nev,"nyert.")
     if computer == 3 and jatekos == 1:
-        print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""Te nyertél.")
+        print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n",nev,"nyert.")
     if computer == 3 and jatekos == 2:
         print("Választásod:",Pvalasztas,"\nSzámítógép választása:",Cvalasztas,"\n""A számítógép nyert.")
 

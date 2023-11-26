@@ -50,7 +50,7 @@ for x in lista:
     str(x)[0]
     print(type (str(x)[0]), type(3))
     if str(x)[0] == 3:
-    harom.append(x)
+        harom.append(x)
 print(harom)
 
 
