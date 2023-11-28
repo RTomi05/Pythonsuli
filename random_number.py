@@ -26,5 +26,5 @@ for _ in range(b):
 
 print(szamok)
 
-szamok=[[veletlen(160,200) for _ in range(veletlen(10,21))] for _ in range(veletlen(10,21))]
+#szamok=[[veletlen(160,200) for _ in range(veletlen(10,21))] for _ in range(veletlen(10,21))]
 print(szamok)
