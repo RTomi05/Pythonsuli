@@ -21,7 +21,7 @@ for n in range(24):
                 Budapest.append(n)
                 veletlen(20,36)
         else:
-                veletlen(20,36)
+                continue
                 
 print("A tegnapi hőmérsékletadatok Budapestre: ",Budapest)
 
