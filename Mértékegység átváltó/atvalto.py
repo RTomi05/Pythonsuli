@@ -17,9 +17,9 @@ valtok=[[10,10,10,1000,1],
           ["ml", "cl", "dl", "l", "hl"],
           []]
 
-tipusId="";
-egysegId="";
-egysegId2="";
+tipusId=""
+egysegId=""
+egysegId2=""
 terfogat = egysegek[2]
 urmertek= egysegek[4]
 while tipusId!=0 or egysegId!=0 or egysegId2!=0:
