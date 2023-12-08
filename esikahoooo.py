@@ -23,4 +23,4 @@ for _ in range(maxHeight):
 
 print("\n".join(rows))
 for u in range(len(rows)):
-	f.write(rows[:1])
+	f.write(str(rows[:1]))
