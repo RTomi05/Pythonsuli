@@ -1,3 +1,6 @@
+print("Rengel Tamás")
+print("2023.12.12.\n")
+
 print ("     @")
 print ("     @")
 print ("    @@")
