@@ -1,8 +1,8 @@
 
 #Írassa a képernyőre a 9 / 2 osztás maradékát. 
 
-a = 9%2
-print(a)
+eredmeny1 = "Az eredmény: {a}"
+print(eredmeny1.format(a = 9%2))
 
 #VAGY
 
@@ -13,8 +13,8 @@ print(ab1)
 
 #A következő sorban a 8 / 4 osztás eredményét írja a képernyőre.
 
-b = 8/4
-print(b)
+eredmeny2 = "Az eredmény: {b}"
+print(eredmeny2.format(b = 8/4))
 
 #VAGY
 
