@@ -28,3 +28,4 @@ def szamolj():
     print(abc)
     
 szamolj()
+
