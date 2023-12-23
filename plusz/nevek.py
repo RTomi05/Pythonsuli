@@ -1,5 +1,3 @@
 
-vnev = "Rengel"
-knev = "Tamás"
-
-print(vnev, knev)
+nev = "{vnev}{knev}"
+print(nev.format(vnev = "Rengel ", knev = "Tamás"))
