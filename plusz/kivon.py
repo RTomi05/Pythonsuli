@@ -25,7 +25,6 @@ def szamolj():
     c = 2
     abc = (a-b)/c
     return(abc)
-    print(abc)
     
 szamolj()
 
