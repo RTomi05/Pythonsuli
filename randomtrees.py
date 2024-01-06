@@ -16,7 +16,7 @@ canvas=Canvas(win, width = 600, height = 300)
 canvas.configure(bg = "white")
 canvas.pack(fill = BOTH, expand = 1)
 
-pontok=[0, 0, 100, 0, 100, 100, 0, 100, 0, 0]
+pontok=[0, 0, 50, 50, 20, 50, 20, 120, -20, 120, -20, 50, -50, 50, 0, 0]
 
 for i in range(0, len(pontok),2):
     pontok[i] += 200
