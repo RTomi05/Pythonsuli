@@ -45,6 +45,20 @@ def forgat(lista,szog,oX=0,oY=0):
 	
     return lista
 
+def kozepSzamol(lista):
+	x = 0
+	y = 0
+	for i in range(len(lista)):
+		if i % 2 == 0:
+			x += lista[i]
+		else:
+			y += lista[i]
+
+        x = x / (len(lista)/2)
+        y = y / len(lista)*2
+	
+    return x,y
+
 
 def faSorsol(darab):
 	lista=[]
