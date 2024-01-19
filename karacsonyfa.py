@@ -34,16 +34,22 @@ def forgatPont(x,y,szog):
 	
     return x2,y2
 
-def forgat(lista,szog,oX=0,oY=0):
+def forgat(lista,szog,oX="",oY=""):
 	
-    lista=eltol(lista,-oX,-oY)
+	#kX,kY=kozepszamol(fenyo2)
+	if oX == "" and oY == "":
+		oX,oY = kozepSzamol(lista)
+	elif ox == "" or oY == "":
+		return lista
 	
-    for i in range(0,len(lista),2):
-        lista[i],lista[i+1]=forgatPont(lista[i],lista[i+1],szog)
+	lista=eltol(lista,-oX,-oY)
 	
-    lista=eltol(lista,-oX,-oY)
+	for i in range(0,len(lista),2):
+		lista[i],lista[i+1]=forgatPont(lista[i],lista[i+1],szog)
 	
-    return lista
+	lista=eltol(lista,-oX,-oY)
+	
+	return lista
 
 def kozepSzamol(lista):
 	x = 0
@@ -54,10 +60,10 @@ def kozepSzamol(lista):
 		else:
 			y += lista[i]
 
-        x = x / (len(lista)/2)
-        y = y / len(lista)*2
+		x = x / len(lista)/2
+		y = y / len(lista)*2
 	
-    return x,y
+	return x,y
 
 
 def faSorsol(darab):
