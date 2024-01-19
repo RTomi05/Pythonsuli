@@ -6,33 +6,38 @@ from tkinter import *
 win=Tk()
 
 #Set the size of the tkinter window
-win.geometry("600x600")
+win.geometry("800x600")
 
 #Create a canvas widget 
 canvas = Canvas(win, width=600, height=600)
 canvas.configure(bg="lightgray")
-canvas.pack(fill=BOTH, expand=1) #teljes ablakot kitölti 
+canvas.pack(fill=BOTH, expand=1) #teljes ablakot kitölti
 
-fenyo2=[200,0,
-        0,100,
-        150,100,
-        0,200,
-        150,200,
-        0,300,
-        150,300,
-        150,400,
-        250,400,
-        250,300,
-        400,300,
-        250,200,
-        400,200,
-        250,100,
-        400,100,
-        200,0]
+TT=[0,0,
+    0,20,
+    35,20,
+    40,90,
+    60,90,
+    65,20,
+    100,20,
+    100,0,
+    0,0]
 
+AA=[0,0,
+    0,20,
+    30,20,
+    40,90,
+    60,90,
+    70,20,
+    100,20,
+    100,0,
+    0,0]
 
-fenyo2Masolat = transzformaciok.eltol(fenyo2,100,100)
-canvas.create_line(fenyo2Masolat,width=5,fill="green")
+nevT = transzformaciok.eltol(TT,20,50)
+canvas.create_line(nevT,width=5,fill="red")
+
+nevA = transzformaciok.eltol(AA,150,50)
+canvas.create_line(nevA,width=5,fill="red")
 
 
 win.mainloop()
