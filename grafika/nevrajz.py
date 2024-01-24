@@ -50,15 +50,16 @@ AVonalka=[300,280,
           350,250,
           350,250]
 
-TT2=[]
-for e in TT:
-    e = transzformaciok.nagyit(e,2)
-    e = transzformaciok.eltol(e,50,100)
-    e = transzformaciok.forgat(e,90)
-    TT2.append(e)
+#TT2=[]
+#for e in TT:
+ #   e = transzformaciok.nagyit(e,2)
+ #   e = transzformaciok.eltol(e,100,340)
+ #   e = transzformaciok.forgat(e,-45)
+
+  #  TT2.append(e)
 	
-for e in TT2:
-    canvas.create_line(e,width=5,fill="red")
+#for e in TT2:
+ #   canvas.create_line(e,width=5,fill="red")
 
 
 canvas.create_line(ASzele,width=5,fill="red")

@@ -3,7 +3,7 @@ import math
 def eltol(pontok,x,y):
 	if isinstance(pontok[0], list):
 		for i in range(len(pontok)):
-			pontok[i] = forgat(pontok[i],szog,oX,oY)
+			pontok[i] = eltol(pontok[i],szog,oX,oY)
 	else:
 		for i in range(0,len(pontok),2):
 			pontok[i]+=x
@@ -15,7 +15,7 @@ def eltol(pontok,x,y):
 def nagyit(pontok,x,y=-1):
 	if isinstance(pontok[0], list):
 		for i in range(len(pontok)):
-			lista[i] = forgat(pontok[i],szog,oX,oY)
+			lista[i] = nagyit(pontok[i],x,y)
 	else:
 		if y==-1:
 			print(y) 
@@ -43,17 +43,16 @@ def forgatPont(x,y,szog):
 
 
 def forgat(lista,szog,oX="",oY=""):
+	#a forgatás középpontjának kiszámítása minden vonal esetén
+	if oX == "" and oY == "":
+		oX,oY = kozepSzamol(lista)
+	elif oX == "" or oY == "":
+		return lista
 	
 	if isinstance(lista[0], list):
 		for i in range(len(lista)):
 			lista[i] = forgat(lista[i],szog,oX,oY)
 	else:
-		#kX,kY=kozepszamol(fenyo2)
-		if oX == "" and oY == "":
-			oX,oY = kozepSzamol(lista)
-		elif oX == "" or oY == "":
-			return lista
-		
 		lista=eltol(lista,-oX,-oY)
 		
 		for i in range(0,len(lista),2):
@@ -63,10 +62,10 @@ def forgat(lista,szog,oX="",oY=""):
 	return lista
 
 
-def kozepSzamol(pontok):
-	if isinstance(pontok[0], list):
+def kozepSzamol(lista):
+	if isinstance(lista[0], list):
 		uj=[]
-		for i in range(len(pontok)):
+		for i in range(len(lista)):
 			x,y=kozepSzamol(lista[i])
 			uj.append(x)
 			uj.append(y)
@@ -85,6 +84,8 @@ def kozepSzamol(pontok):
 			y = y / len(lista)*2
 	
 	return x,y
+
+#def masol:
 
 if __name__ == '__main__':
 	print("Rendesen elindítva")
