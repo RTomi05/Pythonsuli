@@ -32,7 +32,7 @@ TT=[[0,0,
     100,0,
     0,0]]
 
-ASzele=[300,280,
+ASzele=[302,280,
     350,100,
     400,280,
     403,280
@@ -45,31 +45,50 @@ AKozepe=[300,280,
     403,280
     ]
 
-AVonalka=[300,280,
-          350,280,
-          350,250,
-          350,250]
+AVonalka1=[320,250,
+          375,250,
+          ]
 
-#TT2=[]
-#for e in TT:
- #   e = transzformaciok.nagyit(e,2)
- #   e = transzformaciok.eltol(e,100,340)
- #   e = transzformaciok.forgat(e,-45)
+AVonalka2=[330,220,
+           370,220,
+          ]
 
-  #  TT2.append(e)
+
+hatter="#ffffff"
+betuszinek=["red",hatter,"blue"]
+
+
+
+#eredeti megtartása (copy)
+A2 = transzformaciok.masol(ASzele)
+
+
+
+TT2=[]
+for e in TT:
+    e = transzformaciok.eltol(e,40,50)
+    e = transzformaciok.nagyit(e,2)
+    TT2.append(e)
 	
-#for e in TT2:
- #   canvas.create_line(e,width=5,fill="red")
+for e in TT2:
+   canvas.create_line(e,width=5,fill="red")
 
 
 canvas.create_line(ASzele,width=5,fill="red")
 canvas.create_line(AKozepe,width=5,fill="red")
-canvas.create_line(AVonalka,width=5,fill="red")
+canvas.create_line(AVonalka1,width=5,fill="red")
+canvas.create_line(AVonalka2,width=5,fill="red")
 
 
 
 
+while True:
+    canvas.delete("all")
+    TT = transzformaciok.forgat(TT,0.1)
 
-
-
-win.mainloop()
+    for i,e in enumerate(TT2):
+        #d = canvas.create_line(TT2,width=5,fill="red")
+        canvas.create_polygon(e, fill="betuszinek[i]", outline="blue")
+    win.update_idletasks()
+    win.update()
+    #win.mainloop()
