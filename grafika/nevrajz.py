@@ -53,9 +53,26 @@ AVonalka2=[330,220,
            370,220,
           ]
 
+Mkulso=[440,282,
+        440,97,
+        510,160,
+        580,97,
+        580,282
+        ]
 
-hatter="#ffffff"
-betuszinek=["red",hatter,"blue"]
+Mbelso=[438,282,
+        450,282,
+        450,120,
+        510,180,
+        570,120,
+        570,282,
+        583,282]
+
+AA=[]
+
+
+#hatter="#ffffff"
+#betuszinek=["red",hatter,"blue"]
 
 
 
@@ -73,22 +90,26 @@ for e in TT:
 for e in TT2:
    canvas.create_line(e,width=5,fill="red")
 
+for e in TT:
+    e = transzformaciok.forgat(TT,0.1)
+    canvas.create_line(e,width=5,fill="red")
 
 canvas.create_line(ASzele,width=5,fill="red")
 canvas.create_line(AKozepe,width=5,fill="red")
 canvas.create_line(AVonalka1,width=5,fill="red")
 canvas.create_line(AVonalka2,width=5,fill="red")
+canvas.create_line(Mkulso,width=5,fill="red")
+canvas.create_line(Mbelso,width=5,fill="red")
+#canvas.create_line(AA,width=5,fill="red")
 
 
 
+#while True:
+ #   TT = transzformaciok.forgat(TT,0.1)
 
-while True:
-    canvas.delete("all")
-    TT = transzformaciok.forgat(TT,0.1)
-
-    for i,e in enumerate(TT2):
+#    for i,e in enumerate(TT2):
         #d = canvas.create_line(TT2,width=5,fill="red")
-        canvas.create_polygon(e, fill="betuszinek[i]", outline="blue")
-    win.update_idletasks()
-    win.update()
-    #win.mainloop()
+#        canvas.create_polygon(e, fill="betuszinek[i]", outline="blue")
+  #  win.update_idletasks()
+   # win.update()
+win.mainloop()
