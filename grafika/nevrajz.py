@@ -49,7 +49,15 @@ AVonalka1=[320,250,
           375,250,
           ]
 
+A2Vonalka1=[320,250,
+          375,250,
+          ]
+
 AVonalka2=[330,220,
+           370,220,
+          ]
+
+A2Vonalka2=[330,220,
            370,220,
           ]
 
@@ -68,7 +76,11 @@ Mbelso=[438,282,
         570,282,
         583,282]
 
-AA=[]
+ekezet = [650,50,
+          660,90,
+          680,90,
+          670,50,
+          650,50]
 
 
 #hatter="#ffffff"
@@ -77,7 +89,12 @@ AA=[]
 
 
 #eredeti megtartása (copy)
-A2 = transzformaciok.masol(ASzele)
+A2szele = transzformaciok.masol(ASzele)
+A2szele = transzformaciok.eltol(A2szele,320,0)
+A2kozepe = transzformaciok.masol(AKozepe)
+A2kozepe = transzformaciok.eltol(A2kozepe,320,0)
+A2Vonalka1 = transzformaciok.eltol(A2Vonalka1,320,0)
+A2Vonalka2 = transzformaciok.eltol(A2Vonalka2,320,0)
 
 
 
@@ -100,7 +117,11 @@ canvas.create_line(AVonalka1,width=5,fill="red")
 canvas.create_line(AVonalka2,width=5,fill="red")
 canvas.create_line(Mkulso,width=5,fill="red")
 canvas.create_line(Mbelso,width=5,fill="red")
-#canvas.create_line(AA,width=5,fill="red")
+canvas.create_line(A2szele,width=5,fill="red")
+canvas.create_line(A2kozepe,width=5,fill="red")
+canvas.create_line(A2Vonalka1,width=5,fill="red")
+canvas.create_line(A2Vonalka2,width=5,fill="red")
+canvas.create_line(ekezet,width=5,fill="red")
 
 
 
