@@ -76,11 +76,28 @@ Mbelso=[438,282,
         570,282,
         583,282]
 
-ekezet = [650,50,
-          660,90,
-          680,90,
-          670,50,
-          650,50]
+ekezet=[650,50,
+        660,90,
+        680,90,
+        670,50,
+        650,50]
+
+SS = [810,90,
+      750,90,
+      750,180,
+      810,180,
+      810,270,
+      750,270,
+      750,280,
+      825,280,
+      825,165,
+      760,165,
+      760,105,
+      825,105,
+      825,90,
+      800,90
+
+      ]
 
 
 #hatter="#ffffff"
@@ -122,6 +139,7 @@ canvas.create_line(A2kozepe,width=5,fill="red")
 canvas.create_line(A2Vonalka1,width=5,fill="red")
 canvas.create_line(A2Vonalka2,width=5,fill="red")
 canvas.create_line(ekezet,width=5,fill="red")
+canvas.create_line(SS,width=5,fill="red")
 
 
 
