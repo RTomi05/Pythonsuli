@@ -99,8 +99,8 @@ SS = [810,90,
       ]
 
 
-#hatter="#ffffff"
-#betuszinek=["red",hatter,"blue"]
+hatter="#ffffff"
+betuszinek=["red",hatter,"blue"]
 
 
 
@@ -120,14 +120,11 @@ A2Vonalka2 = transzformaciok.eltol(A2Vonalka2,320,0)
 
 
 
-TT2=[]
 for e in TT:
     e = transzformaciok.eltol(e,40,50)
     e = transzformaciok.nagyit(e,2)
-    TT2.append(e)
-	
-for e in TT2:
-   canvas.create_line(e,width=5,fill="red")
+    e = transzformaciok.forgat(e,45)
+
 
 for e in TT:
     e = transzformaciok.forgat(TT,0.1)
@@ -148,12 +145,12 @@ canvas.create_line(SS,width=5,fill="red")
 
 
 
-#while True:
- #   TT = transzformaciok.forgat(TT,0.1)
+while True:
+    TT = transzformaciok.forgat(TT,1)
 
-#    for i,e in enumerate(TT2):
-        #d = canvas.create_line(TT2,width=5,fill="red")
-#        canvas.create_polygon(e, fill="betuszinek[i]", outline="blue")
-  #  win.update_idletasks()
-   # win.update()
-win.mainloop()
+    #for i,e in enumerate(TT):
+        #d = canvas.create_line(TT,width=5,fill="red")
+        #canvas.create_polygon(e, fill="betuszinek[i]", outline="blue")
+    win.update_idletasks()
+    win.update()
+#win.mainloop()
