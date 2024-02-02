@@ -19,7 +19,7 @@ canvas.pack(fill = BOTH, expand = 1)
 canvas.create_oval(0,0,100,100, fill = "red")
 
 labdaSpeed = [1,1]
-labdaPos = [200,200]
+labdaPos = [200,100]
 labdaSize = 50
 
 while True:
@@ -33,7 +33,7 @@ while True:
         labdaSpeed[1]*= -1    
 
 
-    canvas.create_oval(labdaPos[0], labdaPos[1], labdaPos[0] + labdaSize, labdaPos[1] + labdaSize, fill = "red")
+    canvas.create_oval(labdaPos[0], labdaPos[1], labdaPos[0] + labdaSize, labdaPos[1] + labdaSize, fill = "red", outline = "black")
     canvas.update()
 
 
