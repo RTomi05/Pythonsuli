@@ -6,3 +6,15 @@ print("Rengel Tamás 10.B")
 
 hatarA = int(input("Adja meg az eszköz alsó hőmérsékleti határát Celsius fokban! "))
 hatarF = int(input("Adja meg az eszköz felső hőmérsékleti határát Celsius fokban! "))
+
+megfelel = 0
+
+if hatarA < 25:
+    megfelel = megfelel + 1
+if hatarF > 85:
+    megfelel = megfelel + 1
+
+if megfelel == 2:
+    print("Az eszköz megfelel a katonai célokra!")
+
+    
