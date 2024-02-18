@@ -112,7 +112,7 @@ def gombLe(e):
     #print(e)
 
 jatekSpeed = 80
-kajaSpeed = 50
+kajaSpeed = 500
 jatekHatter = "lightgray"
 
 def atmenetColor(red,green,blue):
