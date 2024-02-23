@@ -1,25 +1,29 @@
-class jel:
+
+class Jel:
 	x = 0
 	y = 0
 	meret = 100
-	r = meret * 0.06
 	szin = "black"
 
 	def __init__(self, x, y, meret, canvas):
 		self.x = x
 		self.y = y
 		self.meret = meret
+		self. r = self.meret * 0.06
 		self.canvas = canvas
 		self.rajz()
 
 
-	def rajz(self, vonalak = []):
+	def rajz(self, vonalak = [], korok = []):
 		self.canvas.create_rectangle(self.x, self.y, self.x + self.meret, self.y + self.meret, fill = "gray")
 
 		for egyVonal in vonalak:
 			self.canvas.create_line(egyVonal, width = self.meret * 0.03, fill = self.szin)
+			
+		for egyKor in korok:
+			self.canvas.create_oval(egyKor, outline = self.szin, width = self.meret * 0.03)
 
-class elem(jel):
+class Elem(Jel):
 	def rajz(self):
 		vonalak = [
 			[
@@ -39,9 +43,9 @@ class elem(jel):
 				self.x + self.meret * 1.00, self.y + self.meret * 0.5,
 			],
 		]
-		jel.rajz(self, vonalak)
+		Jel.rajz(self, vonalak)
 		
-class kapcsolo(jel):
+class Kapcsolo(Jel):
 	def rajz(self):
 		vonalak = [
 			[
@@ -57,9 +61,55 @@ class kapcsolo(jel):
 				self.x + self.meret * 1.00, self.y + self.meret * 0.5,
 			],
 		]
-		jel.rajz(self, vonalak)
+		
+		korok = [
+			[self.x + self.meret * 0.333 - self.r, self.y + self.meret * 0.5 - self.r,
+			self.x + self.meret * 0.333 + self.r, self.y + self.meret * 0.5 + self.r
+			],
+			[self.x + self.meret * 0.666 - self.r, self.y + self.meret * 0.5 - self.r,
+			self.x + self.meret * 0.666 + self.r, self.y + self.meret * 0.5 + self.r
+			],
+		]
+
+		Jel.rajz(self, vonalak, korok)
+
+class Lampa(Jel):
+	def rajz(self):
+		dx = self.r / math.sqrt(2)
+		vonalak = [
+			[
+				self.x, 						self.y + self.meret * 0.5,
+				self.x + self.meret * 0.5 - self.r, self.y + self.meret * 0.5,
+			],
+			[
+				self.x + self.meret * 0.5 - dx, self.y + self.meret * 0.5 - dx,
+				self.x + self.meret * 0.5 + dx, self.y + self.meret * 0.5 + dx,
+			],
+			[
+				self.x + self.meret * 0.5 - dx, self.y + self.meret * 0.5 + dx,
+				self.x + self.meret * 0.5 + dx, self.y + self.meret * 0.5 - dx,
+			],
+			[
+				self.x + self.meret * 0.5 + self.r, self.y + self.meret * 0.5,
+				self.x + self.meret * 1.00, self.y + self.meret * 0.5,
+			],
+		]
+		
+		korok = [
+			[
+				self.x + self.meret * 0.333 - self.r, self.y + self.meret * 0.5 - self.r,
+				self.x + self.meret * 0.333 + self.r, self.y + self.meret * 0.5 + self.r
+			],
+			[
+				self.x + self.meret * 0.666 - self.r, self.y + self.meret * 0.5 - self.r,
+				self.x + self.meret * 0.666 + self.r, self.y + self.meret * 0.5 + self.r
+			],
+		]
+
+		Jel.rajz(self, vonalak, korok)
 	
 from tkinter import *
+import math
 
 
 win=Tk()
@@ -70,12 +120,13 @@ canvas = Canvas(win, bg = "white")
 canvas.pack(fill = BOTH, expand = 1)
 
 
-elem1 = elem(0, 0, 100, canvas)
+elem1 = Elem(0, 0, 100, canvas)
 #elem1.rajz()
 
-elem2 = elem(200, 100, 50, canvas)
+elem2 = Elem(200, 100, 50, canvas)
 #elem2.rajz()
 #elem2.szin = "red"
 #elem2.rajz()
-kapcsolo1 = kapcsolo(350, 150, 100, canvas)
+kapcsolo1 = Kapcsolo(350, 150, 100, canvas)
+lampa1 = Lampa(0, 150, 100, canvas)
 win.mainloop()
