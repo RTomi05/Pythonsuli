@@ -15,7 +15,6 @@ class Macska(Emlos):
 	def beszel(self):
 		print("Miaú!")
 
-
 emlos1 = Emlos()
 emlos1.beszel()
 
