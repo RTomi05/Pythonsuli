@@ -11,7 +11,7 @@ class Jel:
 		self.meret = meret
 		self.r = self.meret * 0.06
 		#Bekötési pont by Taki
-		self.bkp = [[self.x, self.y+self.meret*0.5],[self.x+self.meret, self.y+self.meret*0.5],]
+		self.bkp = [[self.x, self.y + self.meret * 0.5], [self.x + self.meret, self.y + self.meret * 0.5]]
 		self.canvas = canvas
 		self.rajz()
 
@@ -23,9 +23,12 @@ class Jel:
 			self.canvas.create_line(egyVonal, width = self.meret * 0.03, fill = self.szin)	
 			
 		for egyKor in korok:
-			self.canvas.create_oval(egyKor, outline = self.szin, width= self.meret*0.03)
+			self.canvas.create_oval(egyKor, outline = self.szin, width = self.meret * 0.03)
 
-	def vezetek(self,masik, sajatBKP=1, masikBKP=0):
+	def vezetek(self, masik, sajatBKP = 1, masikBKP = 0):
+		tavSajat = - self.meret * 0.2 + sajatBKP * 2 * self.meret * 0.2
+		tavMasik = - masik.meret * 0.2 + masikBKP * 2 * masik.meret * 0.2
+
 		#első után a másik, közelebbi pontok
 		#	*****
 		#	*   *--
@@ -33,7 +36,8 @@ class Jel:
 		#         |     *****
 		#          -----*   *
 		#               *****
-		if (sajatBKP==1 and masikBKP==0) and self.bkp[sajatBKP][0] < masik.bkp[masikBKP][0]:
+		# 1.eset
+		if (sajatBKP == 1 and masikBKP == 0) and self.bkp[sajatBKP][0] < masik.bkp[masikBKP][0]:
 			vonalak=[
 				[
 					self.bkp[sajatBKP][0], self.bkp[sajatBKP][1],
@@ -42,7 +46,7 @@ class Jel:
 					masik.bkp[masikBKP][0], masik.bkp[masikBKP][1],
 				],
 			]
-			self.szin="red"
+			self.szin = "red"
 		#első alatt/felett a másik, közelebbi pontok
 		#	*****
 		#	*   *--
@@ -51,18 +55,23 @@ class Jel:
 		#     | *****
 		#      -*   *
 		#       *****
-		elif (sajatBKP==1 and masikBKP==0) and self.x < masik.x < self.x+self.meret:
+		# 2.eset
+		#elif ((sajatBKP == 1 and masikBKP == 0) and self.x < masik.x < self.x + self.meret)\
+		#	    or ((sajatBKP == 1 and masikBKP == 0) and self.x > masik.x):
+		elif (masikBKP == 0) \
+		        and (masik.x < self.x + self.meret):
+
 			vonalak=[
 				[
 					self.bkp[sajatBKP][0], self.bkp[sajatBKP][1],
-					self.bkp[sajatBKP][0]+self.meret*0.2, self.bkp[sajatBKP][1],
-					self.bkp[sajatBKP][0]+self.meret*0.2, (self.bkp[sajatBKP][1]+masik.y)/2,
-					masik.bkp[masikBKP][0]-self.meret*0.2, (self.bkp[sajatBKP][1]+masik.y)/2,
-					masik.bkp[masikBKP][0]-self.meret*0.2, masik.bkp[masikBKP][1],
+					self.bkp[sajatBKP][0] - tavSajat, self.bkp[sajatBKP][1],
+					self.bkp[sajatBKP][0] - tavSajat, (self.y + self.meret + masik.y)/2,
+					masik.bkp[masikBKP][0] + tavSajat, (self.y + self.meret + masik.y)/2,
+					masik.bkp[masikBKP][0] + tavSajat, masik.bkp[masikBKP][1],
 					masik.bkp[masikBKP][0], masik.bkp[masikBKP][1],
 				],
 			]
-			self.szin="green"
+			self.szin = "green"
 		#első alatt/felett a másik, távolabbi pontok
 		#	*****
 		#	*   *-----
@@ -71,16 +80,21 @@ class Jel:
 		#       ***** |
 		#       *   *-
 		#       *****
-		elif (sajatBKP==1 and masikBKP==1) and self.x < masik.x < self.x+self.meret:
+		# 3.eset
+		elif (((sajatBKP == 1 and masikBKP == 1) and self.x < masik.x < self.x + self.meret)) \
+                or ((sajatBKP == 1 and masikBKP == 1) \
+					and self.bkp[sajatBKP][0] < masik.bkp[masikBKP][0]\
+					and (self.bkp[sajatBKP][1] < masik.y \
+		                or self.bkp[sajatBKP][1] > masik.y + masik.meret)):
 			vonalak=[
 				[
 					self.bkp[sajatBKP][0], self.bkp[sajatBKP][1],
-					masik.bkp[masikBKP][0]+self.meret*0.2, self.bkp[sajatBKP][1],
-					masik.bkp[masikBKP][0]+self.meret*0.2, masik.bkp[sajatBKP][1],
+					masik.bkp[masikBKP][0] + tavSajat, self.bkp[sajatBKP][1],
+					masik.bkp[masikBKP][0] + tavSajat, masik.bkp[sajatBKP][1],
 					masik.bkp[masikBKP][0], masik.bkp[masikBKP][1],
 				],
 			]
-			self.szin="blue"
+			self.szin = "blue"
 		#első után a másik, távolabbi pontok
 		#	*****
 		#	*   *-------------
@@ -88,19 +102,37 @@ class Jel:
 		#               ***** |
 		#               *   *-
 		#               *****
-		elif (sajatBKP==1 and masikBKP==1) and self.bkp[sajatBKP][0] < masik.bkp[masikBKP][0]:
+		# 4.eset
+		elif (sajatBKP == 1 and masikBKP == 1) and self.bkp[sajatBKP][0] < masik.bkp[masikBKP][0]:
 			vonalak=[
 				[
 					self.bkp[sajatBKP][0], self.bkp[sajatBKP][1],
-					(self.bkp[sajatBKP][0]+masik.x)/2,					self.bkp[sajatBKP][1],
-					(self.bkp[sajatBKP][0]+masik.x)/2,					masik.y+masik.meret*1.2,
-					masik.x+masik.meret*1.2,							masik.y+masik.meret*1.2,
-					masik.x+masik.meret*1.2,							masik.bkp[masikBKP][1],
+					(self.bkp[sajatBKP][0] + masik.x)/2,					self.bkp[sajatBKP][1],
+					(self.bkp[sajatBKP][0] + masik.x)/2,					masik.y + masik.meret * 1.2,
+					masik.x + masik.meret * 1.2,							masik.y + masik.meret * 1.2,
+					masik.x + masik.meret * 1.2,							masik.bkp[masikBKP][1],
 					masik.bkp[masikBKP][0], masik.bkp[masikBKP][1],
 				],
 			]
-			self.szin="yellow"
+			self.szin = "yellow"
+			
+            
+		elif ((sajatBKP == 1 and masikBKP == 1) \
+					and self.bkp[sajatBKP][0] > masik.bkp[masikBKP][0]\
+					and (self.bkp[sajatBKP][1] < masik.y \
+		                or self.bkp[sajatBKP][1] > masik.y + masik.meret)):
+			vonalak=[
+				[
+					self.bkp[sajatBKP][0], self.bkp[sajatBKP][1],
+					self.bkp[masikBKP][0] + self.meret * 0.2, self.bkp[sajatBKP][1],
+					#self.bkp[sajatBKP][0] + self.meret * 0.2, (self.y,)
+					masik.bkp[masikBKP][0] + self.meret * 0.2, masik.bkp[sajatBKP][1],
+					masik.bkp[masikBKP][0], masik.bkp[masikBKP][1],
+				],
+			]
+			self.szin = "blue"
 		#minden más esetben ferde vonallal összekötés
+		# utolsó eset
 		else:
 			vonalak=[
 				[
@@ -108,7 +140,7 @@ class Jel:
 					masik.bkp[masikBKP][0], masik.bkp[masikBKP][1],
 				],
 			]
-			self.szin="black"
+			self.szin = "black"
 
 		for egyVonal in vonalak:
 			self.canvas.create_line(egyVonal, width = self.meret * 0.03, fill = self.szin)	
@@ -154,7 +186,7 @@ class kapcsolo(Jel):
 			],
 		]
 		
-		korok= [
+		korok = [
 			[
 				self.x+self.meret*0.333-self.r,	self.y+self.meret*0.5-self.r,
 				self.x + self.meret*0.333 + self.r,	self.y+ self.meret*0.5 + self.r
@@ -170,8 +202,8 @@ class kapcsolo(Jel):
 class lampa(Jel):
 	def rajz(self):
 		
-		self.r = self.meret*0.2
-		dx = self.r/math.sqrt(2)
+		self.r = self.meret * 0.2
+		dx = self.r / math.sqrt(2)
 
 		vonalak = [
 			[
@@ -179,12 +211,12 @@ class lampa(Jel):
 				self.x + self.meret * 0.5 - self.r,	 	self.y + self.meret * 0.5,
 			],
 			[
-				self.x + self.meret * 0.5 - dx,		self.y + self.meret * 0.5-dx,
-				self.x + self.meret * 0.5 + dx ,	 self.y + self.meret*0.5 + dx,
+				self.x + self.meret * 0.5 - dx,		self.y + self.meret * 0.5 - dx,
+				self.x + self.meret * 0.5 + dx ,	 self.y + self.meret * 0.5 + dx,
 			],
 			[
 				self.x + self.meret * 0.5 - dx,		self.y + self.meret * 0.5 + dx,
-				self.x + self.meret * 0.5 + dx ,	 self.y + self.meret*0.5 - dx,
+				self.x + self.meret * 0.5 + dx ,	 self.y + self.meret * 0.5 - dx,
 			],
 			[
 				self.x + self.meret * 0.5 + self.r,	self.y + self.meret * 0.5,
@@ -195,8 +227,8 @@ class lampa(Jel):
 		
 		korok= [
 			[
-				self.x+self.meret*0.5-self.r,	self.y+self.meret*0.5-self.r,
-				self.x + self.meret*0.5 + self.r,	self.y+ self.meret*0.5 + self.r
+				self.x + self.meret * 0.5 - self.r,	self.y + self.meret * 0.5 - self.r,
+				self.x + self.meret * 0.5 + self.r,	self.y + self.meret * 0.5 + self.r
 			],
         ]
 		Jel.rajz(self,vonalak,korok)
@@ -250,13 +282,14 @@ kapcs.append(kapcsolo(450,50,100,canvas))
 kapcs.append(kapcsolo(250,50,100,canvas))
 kapcs.append(kapcsolo(50,50,100,canvas))
 kapcs.append(kapcsolo(50,350,100,canvas))
+kapcs.append(kapcsolo(450,200,100,canvas))
 
 
 
 #ellenallas1=Ellenallas(0,150,100,canvas)
 for egyElem in kapcs:
 	for masikBKP in [0,1]:
-		for sajatBKP in [0,1]:
+		for sajatBKP in [0]:	
 			lampa1.vezetek(egyElem, sajatBKP = sajatBKP, masikBKP = masikBKP)
 
 
