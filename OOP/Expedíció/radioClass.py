@@ -14,3 +14,14 @@ class Uzenet:
             return True
         else:
             return False
+        
+
+class Nap:
+    def __init__(self,nap):
+        self.nap = nap
+        self.uzenetek = []
+
+    def hozzaAd(self,uzenet):
+        self.uzenetek.append(uzenet)
+
+
