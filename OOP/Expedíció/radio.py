@@ -29,6 +29,24 @@ for egyUzenet in uzenetek:
 
 napok = []
 
-tempNap = rc.Nap(1)
-for egyUzenet in uzenetek:
-    pass
+while len(napok) < 11:
+    tempNap = rc.Nap(len(napok)+1)
+    for egyUzenet in uzenetek:
+        if egyUzenet.nap == (len(napok)+1):
+            tempNap.hozzaAd(egyUzenet)
+napok.append(tempNap)
+
+
+#másik megoldás
+
+#napok = []
+
+#for i in range(1,12):
+#    tempNap = rc.Nap(i)
+#    for egyUzenet in uzenetek:
+#        if egyUzenet.nap ==i:
+#            tempNap.hozzaAd(egyUzenet)
+#napok.append(tempNap)
+    
+
+
