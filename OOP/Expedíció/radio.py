@@ -29,13 +29,13 @@ for egyUzenet in uzenetek:
 
 napok = []
 
+
 while len(napok) < 11:
     tempNap = rc.Nap(len(napok)+1)
     for egyUzenet in uzenetek:
-        if egyUzenet.nap == (len(napok)+1):
+        if egyUzenet.nap == len(napok)+1:
             tempNap.hozzaAd(egyUzenet)
-napok.append(tempNap)
-
+    napok.append(tempNap)
 
 #másik megoldás
 
@@ -47,6 +47,18 @@ napok.append(tempNap)
 #        if egyUzenet.nap ==i:
 #            tempNap.hozzaAd(egyUzenet)
 #napok.append(tempNap)
-    
+
+print("4. feladat")
+for egyNap in napok:
+    print("{}.nap {} rádióamatőr".format(egyNap.nap,egyNap.uzenetSzam()))
+    #print(f"{egyNap.nap}.nap {egyNap.uzenetSzam()} rádióamatőr")
+
+print(napok[2].helyreallit())
+
+f = open("adaas.txt", "w")
+for egyNap in napok:
+    f.write(egyNap.helyreallit())
+
+f.close()
 
 

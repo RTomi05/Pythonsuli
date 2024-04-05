@@ -26,3 +26,14 @@ class Nap:
 
     def uzenetSzam(self):
         return len(self.uzenetek)
+
+    def helyreallit(self):
+        megfejtes = self.uzenetek[0].uzenet
+
+        for i,egyBetu in enumerate(megfejtes):
+            if egyBetu == "#":
+                for egyUzenet in self.uzenetek:
+                    if egyUzenet.uzenet[i] != "#":
+                        megfejtes = megfejtes[:i] + egyUzenet.uzenet[i] + megfejtes[i+1:]
+                        break
+        return megfejtes
