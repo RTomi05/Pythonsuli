@@ -36,4 +36,19 @@ class Nap:
                     if egyUzenet.uzenet[i] != "#":
                         megfejtes = megfejtes[:i] + egyUzenet.uzenet[i] + megfejtes[i+1:]
                         break
+
         return megfejtes
+
+        """
+        Függvény szame(szo:karaktersorozat): logikai
+        valasz:=igaz
+        Ciklus i:=1-től hossz(szo)-ig
+        ha szo[i]<'0' vagy szo[i]>'9' akkor valasz:=hamis
+        Ciklus vége
+        szame:=valasz
+        Függvény vége
+        """
+
+    def szame(self,szo): 
+        valasz = True
+        

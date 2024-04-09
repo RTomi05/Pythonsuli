@@ -58,7 +58,6 @@ print(napok[2].helyreallit())
 f = open("adaas.txt", "w")
 for egyNap in napok:
     f.write(egyNap.helyreallit())
-
 f.close()
 
 
