@@ -6,6 +6,19 @@ class Uzenet:
         self.amator = int(sor1.split(" ")[1])
 
         self.uzenet = sor2
+        self.szamKereso()
+
+        
+    def szamKereso(self):
+        self.kifejlett = False
+        self.kolyok = False
+
+        szamok = self.uzenet.split(" ")[0].split("/")
+        if len(szamok) == 2:
+            if szamok[0].isnumeric():
+                self.kifejlett = int(szamok[0])
+            if szamok[1].isnumeric():
+                self.kolyok = int(szamok[1])
 
     def farkasKereso(self):
         return "farkas" in self.uzenet
@@ -51,4 +64,15 @@ class Nap:
 
     def szame(self,szo): 
         valasz = True
-        
+        for i in range(len(szo)):
+            if szo[i] < "0" or szo[i] > "9":
+                valasz = False
+
+        return valasz
+
+    def radioAmator(self,szam):
+        for egyUzenet in self.uzenetek:
+            if szam == egyUzenet.amator:
+                return egyUzenet
+            
+        return False
