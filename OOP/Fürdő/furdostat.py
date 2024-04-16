@@ -51,6 +51,9 @@ for egyElem in lista:
 
 print("4. feladat")
 print("A legtöbb időt eltöltött vendég: ")
+#if len(idoVissza(legtobbIdo[0])) == 1:
+#    print("Szia")
+print(idoVissza(legtobbIdo))
 print("{}. vendég {}".format(legtobbIdoVendeg,idoVissza(legtobbIdo)))
 
 
