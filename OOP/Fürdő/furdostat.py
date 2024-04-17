@@ -24,13 +24,13 @@ print("Az utolsó vendég {}-kor lépett ki az öltözőből".format(utolso.ido(
 darab = 0
 elozo = -1
 temp = 1
-for egyAdat in lista:
-    if elozo == egyAdat.vendeg:
+for egyElem in lista:
+    if elozo == egyElem.vendeg:
         temp += 1
     else:
         if temp == 4:
             darab += 1
-        elozo = egyAdat.vendeg
+        elozo = egyElem.vendeg
         temp = 1
 
 print("3. feladat")
@@ -51,10 +51,36 @@ for egyElem in lista:
 
 print("4. feladat")
 print("A legtöbb időt eltöltött vendég: ")
-#if len(idoVissza(legtobbIdo[0])) == 1:
+#if len(idoVissza(legtobbIdo)) == 7:
 #    print("Szia")
 print(idoVissza(legtobbIdo))
 print("{}. vendég {}".format(legtobbIdoVendeg,idoVissza(legtobbIdo)))
 
+stat = [0,0,0]
+
+for egyElem in lista:
+    if egyElem.reszleg == 0 and not egyElem.belepett:
+        if egyElem.ora < 9:
+            stat[0] += 1
+        elif egyElem.ora < 16:
+            stat[1] += 1
+        else:
+            stat[2] += 1
+
+print("5. feladat")
+print("6-9 óra között {} vendég".format(stat[0]))
+print("9-16 óra között {} vendég".format(stat[1]))
+print("16-20 óra között {} vendég".format(stat[2]))
+#VAGY
+#print("6-9 óra között {} vendég\n9-16 óra között {} vendég\n16-20 óra között {} vendég\n".format(*stat))
+
+szaunastat = {}
+temp = 0
+for egyElem in lista:
+    if egyElem.reszleg == 2:
+        if egyElem.belepett:
+            temp = egyElem.idoMp()
+        else:
+            szaunastat[egyElem.vendeg] += egyElem.idoMp() - temp
 
 #hf idővisszaváltás kétszámjegyre 0-tól 9-ig (formázott kiiratás str)
