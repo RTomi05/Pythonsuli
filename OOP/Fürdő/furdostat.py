@@ -4,6 +4,7 @@ def idoVissza(mp):
     ora = mp // (60*60)
     perc = mp % 3600 // 60
     masodperc = mp % 3600 % 60
+    return "{:02}:{:02}:{:02}".format(ora,perc,masodperc)
     return str(ora) + ":" + str(perc) + ":" + str(masodperc)
 
 f = open("furdoadat.txt")
@@ -81,6 +82,22 @@ for egyElem in lista:
         if egyElem.belepett:
             temp = egyElem.idoMp()
         else:
+            if egyElem.vendeg not in szaunastat.keys():
+                szaunastat[egyElem.vendeg] = 0    
             szaunastat[egyElem.vendeg] += egyElem.idoMp() - temp
 
-#hf idővisszaváltás kétszámjegyre 0-tól 9-ig (formázott kiiratás str)
+
+f = open("szauna.txt","w")
+for elem in szaunastat:
+    f.write("{} {}\n".format(elem,idoVissza(szaunastat[elem])))
+f.close()
+
+reszlegstat = {}
+for egyElem in lista:
+    if egyElem.belepett:
+        if egyElem.reszleg not in reszlegstat.keys():
+            reszlegstat[egyElem.reszleg] = []
+        if egyElem.vendeg not in reszlegstat[egyElem.reszleg]:
+            reszlegstat[egyElem.reszleg].append(egyElem.vendeg)
+
+print(reszlegstat)

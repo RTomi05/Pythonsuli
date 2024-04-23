@@ -3,7 +3,7 @@ class Furdoclass:
         vagas = sor.split(" ")
         self.vendeg = int(vagas[0])
         self.reszleg = int(vagas[1])
-        self.belepett = vagas[2]== "0"
+        self.belepett = vagas[2] == "0"
         self.ora = int(vagas[3])
         self.perc = int(vagas[4])
         self.masodperc = int(vagas[5])
