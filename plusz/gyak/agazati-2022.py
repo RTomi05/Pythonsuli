@@ -1,30 +1,4 @@
-#Kérjen be egy szöveget, majd egy egész számot! A második bekérést addig ismételje, amíg nem
-#számot kap! Hiba esetén legyen hibaüzenet. A bekért szöveg annyiadik karakterét írja ki annyiszor,
-#amennyi a szám.
-from agazatiClass import *
 
-#1. feladat:
-#print("1. feladat")
-#elsoFeladat = Szovegkezeles()
-#elsoFeladat.bekertSzoveg()
-#elsoFeladat.bekertSzam()
-#elsoFeladat.kiirandoKarakter()
-
-#Egy triatlon versenyen 3 versenyszámban teljesítenek különböző távokat az indulók. A
-#triatlon.txt tartalmazza a verseny végeredményét, amit minden induló befejezett.
-
-#A forrás első sora az adatok fejlécét tartalmazza. Az adatsorok pontosvesszővel vannak elválasztva, és
-#a következők: az induló neve, férfi-e vagy nő, mikor született, az úszás, a kerékpározás, a futás
-#időeredménye óó:pp:mp formátumban, és a rajtszám. A forrás a rajtszám sorrendjében került
-#rögzítésre.
-#A feladat megoldásához használjon OOP megoldásokat! A kiírásokat a minta szerint végezze.
-#1. Töltse be a file adatait, és tárolja el egy adatszerkezetben, amivel a következő feladatokat meg
-#tudja oldani.
-#2. Hány versenyző indult a versenyen?
-#3. A verseny nyertese, aki legrövidebb idő alatt teljesítette mind a három számot. Keresse meg, ki lett
-#a nyertes, akinek a neve, a rajtszáma, és az összesített ideje jelenjen meg, a minta szerint.
-#4. Hozzon létre egy osszidok.txt nevű file-t, amibe az indulók rajtszáma, neve, és az összesített
-#ideje kerüljön.
 
 versenyzok = []
 class Versenyzo:

@@ -100,4 +100,7 @@ for egyElem in lista:
         if egyElem.vendeg not in reszlegstat[egyElem.reszleg]:
             reszlegstat[egyElem.reszleg].append(egyElem.vendeg)
 
-print(reszlegstat)
+print("7. feladat")
+reszlegLista = ["Öltöző", "Uszoda", "Szaunák", "Gyógyvizes medencék", "Strand"]
+for i in range(1,len(reszlegLista)):
+    print("{}: {}".format(reszlegLista[i], len(reszlegstat[i])))
