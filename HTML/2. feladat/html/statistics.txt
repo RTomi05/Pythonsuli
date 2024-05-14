@@ -1,0 +1,36 @@
+<!-- Shanks -->
+							<tr><th>Name:</th><td>Shanks</td></tr>
+							<tr><th>Crew:</th><td>Red Hair Pirates</td></tr>
+							<tr><th>Origin:</th><td>West Blue</td></tr>
+							<tr><th>Status:</th><td>Alive</td></tr>
+<!-- Marshall D. Teach -->
+							<tr><th>Name:</th><td>Marshall D. Teach</td></tr>
+							<tr><th>Crew:</th><td>Blackbeard Pirates</td></tr>
+							<tr><th>Origin:</th><td>Grand Line</td></tr>
+							<tr><th>Status:</th><td>Alive</td></tr>
+<!-- Monkey D. Luffy -->
+							<tr><th>Name:</th><td>Monkey D. Luffy</td></tr>
+							<tr><th>Crew:</th><td>Straw Hat Pirates</td></tr>
+							<tr><th>Origin:</th><td>East Blue</td></tr>
+							<tr><th>Status:</th><td>Alive</td></tr>
+<!-- Buggy -->
+							<tr><th>Name:</th><td>Buggy</td></tr>
+							<tr><th>Crew:</th><td>Buggy Pirates</td></tr>
+							<tr><th>Origin:</th><td>Grand Line</td></tr>
+							<tr><th>Status:</th><td>Alive</td></tr>
+<!-- Charlotte Linlin -->
+							<tr><th>Name:</th><td>Charlotte Linlin</td></tr>
+							<tr><th>Crew:</th><td>Big Mom Pirates</td></tr>
+							<tr><th>Origin:</th><td>Grand Line</td></tr>
+							<tr><th>Status:</th><td>Unknown</td></tr>
+<!-- Kaidou -->
+							<tr><th>Name:</th><td>Kaidou</td></tr>
+							<tr><th>Crew:</th><td>Beasts Pirates</td></tr>
+							<tr><th>Origin:</th><td>Grand Line</td></tr>
+							<tr><th>Status:</th><td>Unknown</td></tr>
+<!-- Edward Newgate -->
+							<tr><th>Name:</th><td>Edward Newgate</td></tr>
+							<tr><th>Crew:</th><td>Whitebeard Pirates</td></tr>
+							<tr><th>Origin:</th><td>Grand Line</td></tr>
+							<tr><th>Status:</th><td>Deceased</td></tr>
+

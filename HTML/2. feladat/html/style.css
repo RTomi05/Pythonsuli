@@ -1,0 +1,47 @@
+
+body{
+	box-sizing: border-box;
+	background-image: url("hatter.jpg");
+	background-attachment: fixed;
+}
+.doboz {
+    background-color: rgb(249, 230, 147);
+    border: 1px solid rgb(86, 86, 86);
+    border-radius: 10px;
+}
+
+.doboz table{
+    border: 2px solid rgb(86, 86, 86);
+}
+
+.lablec a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.lablec a:hover {
+    text-decoration: none;
+    color: darkred;
+}
+
+.container{
+	background-color: white;
+}
+/*.fejlec*/
+
+p{
+    text-align: justify;
+}
+
+
+
+/*Valamelyik a jó:*/
+
+.doboz img{
+	border: 1px solid black;
+}
+
+.zaszlok img{
+	border: 10px solid red;
+}
