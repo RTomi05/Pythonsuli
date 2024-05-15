@@ -1,0 +1,44 @@
+A) feladat
+Az Állatismeret címû könyv segítségével azonosítsd a képeken látható állatokat!
+Töltsd ki az alábbi táblázatot, hasonlítsd össze a két fajt a megadott szempontok alapján!
+1. faj 2. faj
+1. faj	Szempontok	2. faj	Kapott pont
+	Fajnév		
+	Törzs		
+	Osztály		
+	Kültakaró		
+	Testhõmérséklet		
+	Légzés		
+	Szaporodás és egyedfejlõdés		
+	Szárazföldi életmódhoz alkalmazkodás		
+	Védettség, természetvédelmi értéke Magyarországon		
+A) feladat pontozás
+1. faj	Szempontok	2. faj	Adható pont
+Foltos szalamandra	Fajnév	Zöld gyík (hím)	2 pont
+Gerincesek törzse	Törzs	Gerincesek törzse	2 pont
+Kétéltûek osztálya, farkos kétéltûek	Osztály	Hüllõk osztálya, gyíkok alrendje	2 pont
+Nyálkás/váladékos bõr, méregmirigyek, enyhén elszarusodó, erõs szín	Kültakaró	Elszarusodott, száraz szarupikkelyes bõr	2 pont
+Változó testhõmérséklet	Testhõmérséklet	Változó testhõmérséklet „napozás” után gyorsabb	2 pont
+Bõrlégzés + (Zsákszerû) fejletlen tüdõ	Légzés	Kizárólag tüdõ	2 pont
+Váltivarúak, belsõ megtermékenyítés, átalakulásos: pete, lárva, kifejlett, álelevenszülõ (lárvát szül)	Szaporodás és egyedfejlõdés	Váltivarúak, belsõ megtermékenyítés, átalakulás nélkül, lágy héjú tojásokkal, nap melege „költ”	4 pont
+Egyedfejlõdése, életmódja vízhez kötött. Bõre kiszáradhat. Tüdeje fejletlen, kell a bõrlégzés.	Szárazföldi életmódhoz alkalmazkodás	Nem vízhez kötött a szaporodása és az életmódja. Bõre kiszáradástól védi. Tüdeje fejlett, nincs bõrlégzés.	2 pont
+Aggteleki Nemzeti Park címerállata, VÉDETT, eszmei értéke: 50000 Ft	Védettség, természetvédelmi értéke Magyarországon	VÉDETT, Vörös listás faj, eszmei értéke 10000 Ft	2 pont
+
+B) feladat
+Ismertesd a csont felépítését, és hasonlítsd össze a lapos és csöves csontok szerkezetét!
+A mozgás szervrendszerének passzív részét alkotják a csontok. Milyen egyéb funkcióit ismered a csontváznak? Térj ki a csecsemõk és felnõttek vöröscsontvelõ-arányaira!
+Hogyan változik a csont felépítése az életkor függvényében és miért?
+Mire kell ügyelni a vázrendszer egészsége szempontjából egy csecsemõ esetében?
+Hogyan kerülhetõ el a csontok állapotának nagymértékû romlása idõs korban?
+
+B) feladat pontozás
+Megkülönböztetünk lapos és csöves csontokat. Mindkét csont felszínét csonthártya borítja, amely erekkel és idegekkel dúsan átszõtt. A csonthártya egyrészt védi a csontot, másrészt vérerei révén táplálja a csontot. A csonthártyából lépnek be az erek a csontszövetbe. A csonthártya belsõ sejtrétege új csontszövetet képes termelni, ez pedig elõsegíti a csont vastagodását, valamint a sérülések begyógyulását. Mind a lapos, mind a csöves csontok fõ tömegét a tömör csontállomány alkotja. Ezen belül találjuk a szivacsos állományt. Az állomány csontlemezekbõl épül fel a csonton jelentkezõ erõhatásoknak megfelelõen. Ez a szerkezet könnyû, de a csontgerendák óriási szilárdságot, nagy teherbírást kölcsönöznek a csontnak. Az üreget vörös csontvelõ tölti ki, ami az állandóan pusztuló vérsejtek szüntelen pótlásáról gondoskodik. A lapos csontok legbelsõ részét teljesen kitölti a szivacsos állomány, ebben találjuk a vörös csontvelõt. A csöves csontokban szivacsos csontállományt viszont csak a csontok végein találhatunk, ebben ugyancsak vörös csontvelõ húzódik. A csöves csont középsõ része üreges, ezt nevezzük csontüregnek vagy velõüregnek, amelyben sárga csontvelõ van, melynek üregkitöltõ, zsírraktározó szerepe van, de vérveszteség esetén visszaalakulhat vörös csontvelõvé.
+8 pont
+A csontok a mozgáson (izmok tapadása), a test tartásán és a védelmi funkción kívül még a vérképzésben is szerepet játszanak. Ennek helye a vörös csontvelõ, amely a vér alakos elemeinek, a vörösvértesteknek, a fehérvérsejteknek és a vérlemezkéknek a termelõje. Vörös csontvelõ a csecsemõben több csontban található: csigolyák, bordák, medencecsont nagy része, a felsõ és alsó végtag teljes hossza. Vörös csontvelõ a felnõttben sokkal kevesebb csontban található: csigolyák, bordák, medencecsúcs, a felsõ végtagcsontok vége (váll, könyök, csukló) és az alsó végtag csontjainak vége (combcsont felsõ része, térd, boka).
+5 pont
+Az életkor növekedésével minden emberben egyre nagyobb mértékû a csonttömegvesztés, különösen a nõk esetében. Ennek következtében megnõ a csontritkulás és az azzal összefüggõ törések kockázata. Ez a tömegvesztés az öregedés természetes velejárója, de nem mindegy, hogy milyen gyorsan zajlik, és milyen mértékû. Kialakulásában öröklött hajlam, nem megfelelõ táplálkozás, hormonális változások – pl. nõk esetén a menopauzával/változó korral bekövetkezõ ösztrogénszint-csökkenés, férfiakban a tesztoszteronszint-csökkenés, illetve bizonyos betegségek (daganat, vesebetegségek) és gyógyszerek játszanak nagy szerepet.
+5 pont
+A csecsemõk vázrendszerének egészséges fejlõdése elsõsorban az anyán múlik, mivel legfontosabb táplálékuk az anyatej. Az anyának már a terhessége alatt figyelnie kell arra, hogy megfelelõ mennyiségû kalcium és vitamin jusson a szervezetébe. Emellett egy csecsemõt is rendszeresen kell tornáztatni, levegõztetni, de megerõltetni nem szabad.
+3 pont
+A csontok állapotának nagymértékû romlása elkerülhetõ, ha megfelelõ mennyiségû kalciumion és D-vitamin szerepel a napi étrendünkben, rendszeresen mozgunk – a terhelés ugyanis inger a csontépítésre, a nem megfelelõen terhelt csontot pedig a szervezet lebontja. Javítja csontjaink állapotát, ha nem dohányzunk, nem fogyasztunk túl sok alkoholt. Ha rendszeresen (kétévente) részt veszünk a szûrõvizsgálatokon (csontsûrûség-vizsgálat), kontrollált lesz állapotunk.
+4 pont
