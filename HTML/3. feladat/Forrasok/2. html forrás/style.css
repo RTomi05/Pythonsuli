@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Chango&effect=shadow-multiple');
+body{
+	box-sizing: border-box;
+	background-color: #597b9f;
+}
+
+.alap
+{
+	background-color: white;
+	padding:0px;
+}
+.fejlec{
+	background-position: center center;
+	background-size: cover;
+}
+.fejlec h1{
+	font-family: "Chango",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-shadow: 0px 0px 5px black;
+	font-size: 5em;
+}
+.fejlec h4{
+	text-shadow: 0px 0px 5px black;
+}
+
+h2,h3
+{
+	color:#604c37;
+}
+
+nav h3{
+	color:#fae699;
+	text-shadow: 0px 0px 2px #604c37;
+}
+
+
+nav.doboz ul a
+{
+	color:#604c37;
+	font-size:18px;
+}
+nav.doboz ul a:hover
+{
+	color:white;
+    
+}
+.doboz {
+	border: 1px solid #597b9f;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px #888888;
+	font-size:16px;
+    background-color: #d6be7a;
+}
+
+footer.lablec a:hover{
+	text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+.card-text
+{
+	font-size:smaller;
+}
+
+header{
+    background-image: url(mezo.jpg);
+    background-repeat: no-repeat;
+}
+
+p{
+    text-align: justify;
+}

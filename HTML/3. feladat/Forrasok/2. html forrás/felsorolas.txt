@@ -1,0 +1,8 @@
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-info active text-center">Anyakönyvezések</li>
+							<li class="list-group-item list-group-item-info">1970-1979: <b>34</b> fő</li>
+							<li class="list-group-item list-group-item-light">1980-1989: <b>51</b> fő</li>
+							<li class="list-group-item list-group-item-info">1990-1999: <b>21</b> fő</li>
+							<li class="list-group-item list-group-item-light">2000-2009: <b>16</b> fő</li>
+							<li class="list-group-item list-group-item-info">2010-2019: <b>8</b> fő</li>
+						</ul>
