@@ -1,11 +1,7 @@
-def adatsor():
-    print("drága")
-    adatok1 = []
-    adatok2 = []
-    adatok3 = []
 
 def haromszog():
 
+    global szamok
     szamok = []
     while len(szamok) == 0:
         try:
@@ -30,6 +26,19 @@ def haromszog():
 
     print(szamok)
 
+    adatsor()
+
+
+def adatsor():
+    if adatok1 == []:
+        adatok1 = szamok
+        elso = 1
+    elif adatok2 == [] and elso == 1:
+        adatok2 = szamok
+    else:
+        adatok3 = szamok
+
+    print(adatok1,adatok2,adatok3)
 
 
 

@@ -1,6 +1,5 @@
 
 from f2modul import *
 
-haromszog()
-
-adatsor()
+for i in range(3):
+    haromszog()
