@@ -1,7 +1,7 @@
 import random
 
 #A gép száma:
-gep = random.randint(0,2)
+gep = random.randint(0,9)
 rossz = 0
 
 while rossz <= 2:
