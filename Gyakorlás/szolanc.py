@@ -10,8 +10,10 @@ while megy == 0:
         szavak.append(szo)
         hanyadik += 1
     elif hanyadik > 1:
-        print("Hali")
+        elozoSzo = szo
         szo = input("Kérem a(z) {} szót! ".format(hanyadik))
-        if elozoSzo[-1] == szo[1]:
+        if elozoSzo[-1] == szo[0]:
             hanyadik += 1
+            szavak.append(szo)
+            print(szavak)
     
