@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Hanalei+Fill');
+body{
+	box-sizing: border-box;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url(./img/funyiras-nagy.jpg);
+	background-repeat: no-repeat;
+	background-color: green;
+}
+
+.alap
+{
+	background-color: white;
+}
+.fejlec{
+	background-image: url(img/kezdo_slide_4.jpg);
+	padding:30px;
+}
+.fejlec h1{
+	font-family: Hanalei Fill;
+	font-size: 5em;
+	text-align: center;
+	color:#ACD221;
+	
+	text-shadow: 0px 0px 10px black, 0px 0px 2px #294e04;
+}
+.fejlec h4{
+	text-shadow: 0px 0px 5px black;
+}
+
+h2,h3
+{
+	color:#604c37;
+}
+
+nav h3{
+	color:#fae699;
+	text-shadow: 0px 0px 2px #604c37;
+}
+
+.card-text
+{
+	font-size:smaller;
+}
+
+.fa
+{
+	color:#ACD221;
+}
+.kerekBorder
+{
+	border-radius: 15px;
+}
+
+footer{
+	border-end-start-radius: 50px;
+	border-end-end-radius: 50px;
+	background-color: #294e04;
+}
+
+footer a{
+	color:#ACD221;
+}
+
+p{
+	text-align: justify;
+}
+
+footer a:hover{
+	text-decoration:none;
+	font-style: italic;
+}
+
+section{
+	border-bottom: 2px solid #294e04;
+}
+

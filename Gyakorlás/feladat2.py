@@ -1,5 +1,6 @@
+from modul import *
 
-from f2modul import *
+szam()
+keplet()
 
-for i in range(3):
-    haromszog()
+print("2. feladat")
